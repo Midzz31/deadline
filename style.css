@@ -273,3 +273,28 @@ main {
     animation: fadeIn 1.5s ease-in-out; 
     font-size: 18px;
 }
+
+.report-content a:hover {
+    color: #1e88e5;
+}
+
+.report-screenshots {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
+    justify-content: center;
+}
+
+.report-screenshots img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.report-screenshots img:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
