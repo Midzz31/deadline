@@ -318,3 +318,17 @@ footer {
         transform: translateY(0);
     }
 }
+
+.paragraph-box {
+    border: 3px solid #4CAF50; 
+    border-radius: 12px; 
+    background: rgba(255, 255, 255, 0.85); 
+    padding: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
+    font-family: "Roboto", sans-serif;
+    color: #333; 
+    text-align: center; 
+    max-width: 600px; 
+    margin: 20px auto; 
+    animation: fadeIn 1s ease-in-out; 
+}
