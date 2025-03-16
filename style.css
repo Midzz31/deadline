@@ -1,5 +1,65 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@300;500&display=swap');
 
+.menu-icon,
+#menu-toggle {
+    display: none; 
+}
+
+@media screen and (max-width: 600px) {
+    .menu-icon {
+        display: block; 
+        font-size: 1.5em;
+        color: #fff;
+        cursor: pointer;
+        position: absolute;
+        top: 15px;
+        right: 20px;
+    }
+
+    #menu-toggle {
+        display: block; 
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        background: #1e88e5;
+        padding: 10px;
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        border-radius: 8px;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    #menu-toggle:checked + nav ul {
+        display: flex; 
+    }
+}
+
+@media screen and (min-width: 601px) {
+    nav ul {
+        display: flex; 
+        justify-content: center;
+        gap: 20px;
+        padding: 0;
+        list-style: none;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        font-size: 1.2em;
+        color: #fff;
+        transition: color 0.3s ease-in-out;
+    }
+
+    nav ul li a:hover {
+        color: #ffeb3b;
+    }
+}
+
+
 * {
     margin: 0;
     padding: 0;

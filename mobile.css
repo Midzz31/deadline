@@ -1,111 +1,63 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-
-body {
-    font-family: "Roboto", sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background: #f7f9fc;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-header {
-    text-align: center;
-    padding: 20px;
-    background: #1e88e5;
-    color: #fff;
-}
-
-header h1 {
-    font-size: 2.5em;
-    font-weight: bold;
-}
-
-header p {
-    font-size: 1.2em;
-    font-style: italic;
-}
-
-nav {
-    background: #283593;
-    padding: 10px;
-    position: relative;
-}
-
-.menu {
-    list-style: none;
-    display: none; 
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-    padding: 10px 0;
-    background: #1e88e5;
-    margin: 0;
-}
-
-.menu li {
-    margin: 10px 0;
-}
-
-.menu a {
-    text-decoration: none;
-    font-size: 1.2em;
-    color: #fff;
-    transition: color 0.3s ease;
-}
-
-.menu a:hover {
-    color: #ffeb3b;
-}
-
-
-.dropdown-btn {
-    display: block;
-    background: #283593;
-    color: #fff;
-    font-size: 1.5em;
-    padding: 10px;
-    cursor: pointer;
-    text-align: center;
-    width: 100%;
-    user-select: none; 
-}
-
-.dropdown-btn:hover {
-    background: #1e88e5;
-}
-
-
-#toggle-menu {
-    display: none; 
-}
-
-#toggle-menu:checked + .menu {
-    display: flex; 
-    flex-direction: column;
-    align-items: center;
-}
-
-
-@media (min-width: 769px) {
-    .dropdown-btn {
-        display: none; 
+@media screen and (max-width: 600px) {
+    body {
+        padding: 0 10px;
+        background-size: cover;
     }
 
-    .menu {
-        display: flex; 
-        flex-direction: row;
-        justify-content: center;
-        gap: 20px;
+    .menu-icon {
+        display: block;
+        font-size: 1.8em;
+        color: #fff;
+        cursor: pointer;
+        position: absolute;
+        top: 15px;
+        right: 20px;
     }
 
-    .menu li {
-        margin: 0;
+    #menu-toggle {
+        display: none;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        background: #1e88e5;
+        padding: 10px;
+        position: absolute;
+        top: 50px;
+        right: 10px;
+        border-radius: 8px;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    #menu-toggle:checked + nav ul {
+        display: flex;
+    }
+
+    nav a {
+        font-size: 1em;
+        color: #fff;
+        text-decoration: none;
+        text-align: center;
+        padding: 10px;
+    }
+
+    nav a:hover {
+        color: #ffeb3b;
+    }
+
+    .learning-container {
+        width: 100%;
+    }
+
+    .image-gallery {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 10px;
+    }
+
+    .video-link {
+        font-size: 1em;
+        padding: 8px 16px;
     }
 }
